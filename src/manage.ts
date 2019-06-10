@@ -84,6 +84,8 @@ export class Manager {
       this.currLocalDataSource.mods.push(remoteMod);
       this.currLocalDataSource.reOrder();
     }
+
+    this.regenerateFiles();
   }
 
   makeSameBase(baseName: string) {
@@ -110,6 +112,8 @@ export class Manager {
       this.currLocalDataSource.baseClasses.push(remoteBase);
       this.currLocalDataSource.reOrder();
     }
+
+    this.regenerateFiles();
   }
 
   calDiffs() {
